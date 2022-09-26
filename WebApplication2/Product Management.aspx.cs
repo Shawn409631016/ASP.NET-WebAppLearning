@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace WebApplication2
 {
-    public partial class Circle_Calculator : System.Web.UI.Page
+    public partial class Product_Management : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,15 +19,14 @@ namespace WebApplication2
         {
             try
             {
-                Circle c = new Circle(Double.Parse(TextBox1.Text));
-                Label1.Text = c.Area().ToString();
-                Label2.Text = c.Circumferece().ToString();
+                Product p = new Product();
+                p.Price = 100;
+                Label1.Text = p.Total_Sales(Int32.Parse(TextBox1.Text)).ToString();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 Label1.Text = err.Message.ToString();
             }
-
         }
     }
 }
