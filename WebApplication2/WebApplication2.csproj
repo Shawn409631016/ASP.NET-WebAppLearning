@@ -172,6 +172,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="B.cs" />
     <Compile Include="Circle Calculator.aspx.cs">
       <DependentUpon>Circle Calculator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
