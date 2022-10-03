@@ -28,7 +28,7 @@ namespace dictionary
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Label1.Text = 
+            Label1.Text = DropDownList1.SelectedValue;
         }
     }
 }
