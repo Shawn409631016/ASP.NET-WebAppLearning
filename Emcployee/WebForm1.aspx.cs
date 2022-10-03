@@ -14,6 +14,30 @@ namespace Emcployee
 
         }
 
-        
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Employee ee = new Employee();
+            List<string> ss = new List<string>();
+            ee.Name = TextBox1.Text;
+            
+            if(RadioButtonList1.SelectedValue == "Male")
+            {
+                ee.Gender = true;
+            }
+            else
+            {
+                ee.Gender = false;
+            }
+
+            foreach(ListItem i in CheckBoxList1.Items)
+            {
+                if (i.Selected)
+                {
+                    ss.Add(i.Value);
+                }
+            }
+            ee.Skills = ss;
+            Label1.Text = ee.get_info();
+        }
     }
 }

@@ -15,8 +15,19 @@
                 <asp:ListItem>Female</asp:ListItem>
             </asp:RadioButtonList>
             <br />
-            Name:<asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+            Name:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <br />
+            <br />
+            Skills:<br />
+            <asp:CheckBoxList ID="CheckBoxList1" runat="server">
+                <asp:ListItem>Java</asp:ListItem>
+                <asp:ListItem>C#</asp:ListItem>
+                <asp:ListItem>C</asp:ListItem>
+            </asp:CheckBoxList>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server"></asp:Label>
             <br />
         </div>
     </form>
