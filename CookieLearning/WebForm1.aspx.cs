@@ -16,11 +16,18 @@ namespace CookieLearning
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            HttpCookie cc = new HttpCookie("Hello");
-            cc["name"] = TextBox1.Text;
+            //cookie
+            /*HttpCookie cc = new HttpCookie("Hello");
+            /cc["name"] = TextBox1.Text;
             cc.Expires = DateTime.Now.AddYears(1);
-            Response.Cookies.Add(cc);
-            Response.Redirect("WebForm2.aspx");
+            Response.Cookies.Add(cc);*/
+
+            //Url
+            string r = this.Server.UrlEncode(TextBox1.Text);
+            string s = this.Server.UrlEncode(TextBox2.Text);
+            this.Server.Transfer("WebForm2.aspx?a="+r + "&b="+s);
+
+            
         }
     }
 }

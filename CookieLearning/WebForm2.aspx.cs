@@ -11,7 +11,17 @@ namespace CookieLearning
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            /*HttpCookie aa = Request.Cookies["Hello"];
+            if(aa is null)
+            {
+                Label1.Text = "No cookies";
+            }
+            else
+            {
+                Label1.Text = aa["name"];
+            }*/
+            Label1.Text = Request.QueryString["a"];
+            Label2.Text = Request.QueryString["b"];
         }
     }
 }
