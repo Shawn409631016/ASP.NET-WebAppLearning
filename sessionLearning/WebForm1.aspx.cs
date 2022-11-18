@@ -16,8 +16,8 @@ namespace name
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            this.Session["name"] = TextBox1.Text;
-            this.Response.Redirect("WebForm2.aspx");
+            Session["name"] = TextBox1.Text;
+            Response.Redirect("WebForm2.aspx");
         }
     }
 }
