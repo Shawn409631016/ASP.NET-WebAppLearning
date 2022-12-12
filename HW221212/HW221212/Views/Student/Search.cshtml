@@ -1,0 +1,22 @@
+﻿@model List<Student>
+
+<form method="post" asp-action="Search" asp-controller="Student">
+    <p>
+        Id: <select name="value1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <input type="submit" />
+    </p>
+</form>
+
+@if(Model != null)
+{
+    @foreach(Student i in Model){
+        <p>
+            @($"{i.Id} - {i.Name} - {i.Department}")
+        </p>
+    }
+}
