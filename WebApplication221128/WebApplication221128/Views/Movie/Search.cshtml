@@ -1,0 +1,25 @@
+﻿@model List<Movie>
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h2>Search</h2>
+<form method="post" asp-action="Search" asp-controller="Movie">
+    <p>
+        Type: <select name="value1">
+                <option value="A">A</option> 
+                <option value="B">B</option> 
+              </select>
+        <input type="submit" />
+    </p>
+</form>
+
+@if(Model != null)
+{
+    @foreach(Movie i in Model)
+    {
+        <p>
+            @($"{i.Id} - {i.Title} - {i.ReleasedDate} - {i.Type} - {i.Price}")
+        </p>
+    }
+}

@@ -1,0 +1,12 @@
+﻿@model List<Movie>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+@foreach(Movie i in Model)
+{
+    <p>
+        @($"{i.Id} - {i.Title} - {i.ReleasedDate} - {i.Type} - {i.Price}")
+    </p>
+}
