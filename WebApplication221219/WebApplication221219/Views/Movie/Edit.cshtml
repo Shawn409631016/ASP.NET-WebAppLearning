@@ -1,0 +1,13 @@
+﻿@model Movie2
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit" method="post">
+    <p>ID: <input type="text" asp-for="@Model.Id" /></p>
+    <p>Title: <input type="text" asp-for="@Model.Title" /></p>
+    <p>Price: <input type="text" asp-for="@Model.Price" /></p>
+    <p><input type="submit"/></p>
+</form>
