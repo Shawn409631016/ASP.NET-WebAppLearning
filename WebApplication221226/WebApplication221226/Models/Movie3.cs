@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication221219_2.Models
+namespace WebApplication221226.Models
 {
     public class Movie3
     {
